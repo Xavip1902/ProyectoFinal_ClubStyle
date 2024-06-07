@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "702369600161",
+    "project_id": "proyectofinal-clubstyle",
+    "storage_bucket": "proyectofinal-clubstyle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702369600161:android:838f59e93a23a54b64d6e0",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinal_clubstyle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsV98S7GX1yXtxH3pK73Q-RrBEAwoNlVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

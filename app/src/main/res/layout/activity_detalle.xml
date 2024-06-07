@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/atrasBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/back" />
+
+                <ImageView
+                    android:id="@+id/favBtn"
+                    android:layout_width="29dp"
+                    android:layout_height="39dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/fav" />
+
+                <ImageView
+                    android:id="@+id/shareBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="39dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/favBtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/share" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="16dp"
+                android:background="@drawable/grey_bg"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBaseline_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jersey Manchester United"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/priceTxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/priceTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$60"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingBar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.DeviceDefault.RatingBar.Indicator"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:stepSize="0.1"
+                    android:transformPivotX="0dp"
+                    android:isIndicator="true"
+                    android:progressTint="#ffc106"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ratingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/detalleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detalle del Producto"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/descripcionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Este jersey combina tecnología de punta y diseño
+                estético para representar al equipo con orgullo y mantener
+                a los jugadores en su mejor rendimiento durante los partidos."/>
+
+            <TextView
+                android:id="@+id/tallaTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccion tu talla"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclearTalla"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:id="@+id/addCarritoBtn"
+                android:background="@color/azul"
+                android:layout_margin="32dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                style="@android:style/Widget.Button"
+                android:text="Añadir al Carrito"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
