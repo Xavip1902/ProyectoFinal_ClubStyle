@@ -31,7 +31,6 @@ public class tallaAdapter extends RecyclerView.Adapter<tallaAdapter.Viewholder> 
 
     @Override
     public void onBindViewHolder(@NonNull tallaAdapter.Viewholder holder, int position) {
-
     }
 
     @Override
