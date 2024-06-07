@@ -3,7 +3,7 @@ package com.example.proyectofinal_clubstyle;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.project1861.Domain.ItemsDomain;
+//import com.example.project1861.Domain.ItemsDomain;
 import com.example.proyectofinal_clubstyle.dominio.ItemDominio;
 
 import java.util.ArrayList;
@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class ManagmentCart {
 
     private Context context;
-    private TinyDB tinyDB;
 
     public ManagmentCart(Context context) {
         this.context = context;
